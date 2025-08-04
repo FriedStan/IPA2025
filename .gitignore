@@ -1,3 +1,5 @@
 paramiko-venv/
 netmiko-venv/
 netmiko-jinja2-venv/
+ntc-templates/
+__pycache__/
