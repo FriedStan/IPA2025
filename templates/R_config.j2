@@ -1,0 +1,15 @@
+router ospf 1 vrf control-data
+{% for net in ospf_networks %}
+ network {{ net }} area 0
+{% endfor %}
+
+{% if R2 %}
+ default-information originate
+ip access-list standard pat1
+ permit 192.168.123.0 0.0.0.255 any
+ip nat inside source list pat1 int g0/3 vrf control-data match-in-vrf
+interface GigabitEthernet0/2
+ ip nat inside
+interface GigabitEthernet0/3
+ ip nat outside
+{% endif %}

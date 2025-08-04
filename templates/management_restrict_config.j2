@@ -1,0 +1,7 @@
+ip access-list standard management-ssh-telnet
+ permit 172.31.106.0 0.0.0.255
+ permit 10.30.6.0 0.0.0.255
+ permit 172.16.197.0 0.0.0.255
+line vty 0 4
+ transport input telnet ssh
+ access-class management-ssh-telnet

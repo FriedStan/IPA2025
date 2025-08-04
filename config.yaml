@@ -1,0 +1,11 @@
+credentials:
+  username: admin
+  private_key: "/home/kuqing/.ssh/ipa_rsa"
+
+devices:
+  S1:
+    ip: 172.31.106.3
+  R1:
+    ip: 172.31.106.4
+  R2:
+    ip: 172.31.106.5
